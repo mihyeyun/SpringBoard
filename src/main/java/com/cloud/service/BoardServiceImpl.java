@@ -18,7 +18,7 @@ public class BoardServiceImpl implements BoardService {
 	
 	
 	@Override
-	public void insertBoard(BoardVO vo) {
+	public void insertBoard(BoardVO vo) {	//글쓰기
 		dao.insertBoard(vo);
 		
 	}
@@ -26,6 +26,26 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public List<BoardVO> getBoardList() {	//목록 보기 서비스
 		return dao.getBoardList();
+	}
+
+	@Override
+	public BoardVO getBoard(int bno) {		//글 상세 보기
+		return dao.getBoard(bno);
+	}
+
+	@Override
+	public void deleteBoard(BoardVO vo) {	//글 삭제
+		dao.deleteBoard(vo);
+	}
+
+	@Override
+	public void updateBoard(BoardVO vo) {	//글 수정
+		dao.updateBoard(vo);
+	}
+
+	@Override
+	public void updateCount(int bno) {		//조회수
+		dao.updateCount(bno);
 	}
 
 
